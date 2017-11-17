@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3B986AF21FBF8CBC00629E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B986AF11FBF8CBC00629E60 /* AppDelegate.swift */; };
-		3B986AF41FBF8CBC00629E60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B986AF31FBF8CBC00629E60 /* ViewController.swift */; };
 		3B986AF71FBF8CBC00629E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B986AF51FBF8CBC00629E60 /* Main.storyboard */; };
 		3B986AF91FBF8CBC00629E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B986AF81FBF8CBC00629E60 /* Assets.xcassets */; };
 		3B986AFC1FBF8CBC00629E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B986AFA1FBF8CBC00629E60 /* LaunchScreen.storyboard */; };
@@ -16,6 +15,8 @@
 		3B986B151FBF8CEF00629E60 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B121FBF8CEE00629E60 /* FBSDKCoreKit.framework */; };
 		3B986B161FBF8CEF00629E60 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B131FBF8CEE00629E60 /* FBSDKLoginKit.framework */; };
 		3B986B171FBF8CEF00629E60 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B141FBF8CEE00629E60 /* Bolts.framework */; };
+		3B986B1B1FBF8D4600629E60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B986B191FBF8D4600629E60 /* HomeViewController.swift */; };
+		3B986B1C1FBF8D4600629E60 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B986B1A1FBF8D4600629E60 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,6 @@
 /* Begin PBXFileReference section */
 		3B986AEE1FBF8CBC00629E60 /* facebook-login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "facebook-login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B986AF11FBF8CBC00629E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B986AF31FBF8CBC00629E60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B986AF61FBF8CBC00629E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B986AF81FBF8CBC00629E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B986AFB1FBF8CBC00629E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +42,8 @@
 		3B986B121FBF8CEE00629E60 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "facebook-login/Frameworks/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		3B986B131FBF8CEE00629E60 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "facebook-login/Frameworks/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		3B986B141FBF8CEE00629E60 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "facebook-login/Frameworks/Bolts.framework"; sourceTree = "<group>"; };
+		3B986B191FBF8D4600629E60 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3B986B1A1FBF8D4600629E60 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,8 @@
 		3B986AF01FBF8CBC00629E60 /* facebook-login */ = {
 			isa = PBXGroup;
 			children = (
+				3B986B181FBF8D3900629E60 /* Home */,
 				3B986AF11FBF8CBC00629E60 /* AppDelegate.swift */,
-				3B986AF31FBF8CBC00629E60 /* ViewController.swift */,
 				3B986AF51FBF8CBC00629E60 /* Main.storyboard */,
 				3B986AF81FBF8CBC00629E60 /* Assets.xcassets */,
 				3B986AFA1FBF8CBC00629E60 /* LaunchScreen.storyboard */,
@@ -114,6 +116,15 @@
 				3B986B131FBF8CEE00629E60 /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B986B181FBF8D3900629E60 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3B986B191FBF8D4600629E60 /* HomeViewController.swift */,
+				3B986B1A1FBF8D4600629E60 /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				3B986AFC1FBF8CBC00629E60 /* LaunchScreen.storyboard in Resources */,
 				3B986AF91FBF8CBC00629E60 /* Assets.xcassets in Resources */,
 				3B986AF71FBF8CBC00629E60 /* Main.storyboard in Resources */,
+				3B986B1C1FBF8D4600629E60 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B986AF41FBF8CBC00629E60 /* ViewController.swift in Sources */,
 				3B986AF21FBF8CBC00629E60 /* AppDelegate.swift in Sources */,
+				3B986B1B1FBF8D4600629E60 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
