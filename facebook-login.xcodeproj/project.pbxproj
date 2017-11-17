@@ -13,6 +13,9 @@
 		3B986AF91FBF8CBC00629E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B986AF81FBF8CBC00629E60 /* Assets.xcassets */; };
 		3B986AFC1FBF8CBC00629E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B986AFA1FBF8CBC00629E60 /* LaunchScreen.storyboard */; };
 		3B986B071FBF8CBC00629E60 /* facebook_loginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B986B061FBF8CBC00629E60 /* facebook_loginTests.swift */; };
+		3B986B151FBF8CEF00629E60 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B121FBF8CEE00629E60 /* FBSDKCoreKit.framework */; };
+		3B986B161FBF8CEF00629E60 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B131FBF8CEE00629E60 /* FBSDKLoginKit.framework */; };
+		3B986B171FBF8CEF00629E60 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B141FBF8CEE00629E60 /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		3B986B021FBF8CBC00629E60 /* facebook-loginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "facebook-loginTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B986B061FBF8CBC00629E60 /* facebook_loginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facebook_loginTests.swift; sourceTree = "<group>"; };
 		3B986B081FBF8CBC00629E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B986B121FBF8CEE00629E60 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "facebook-login/Frameworks/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		3B986B131FBF8CEE00629E60 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "facebook-login/Frameworks/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		3B986B141FBF8CEE00629E60 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "facebook-login/Frameworks/Bolts.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B986B151FBF8CEF00629E60 /* FBSDKCoreKit.framework in Frameworks */,
+				3B986B161FBF8CEF00629E60 /* FBSDKLoginKit.framework in Frameworks */,
+				3B986B171FBF8CEF00629E60 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,7 @@
 				3B986AF01FBF8CBC00629E60 /* facebook-login */,
 				3B986B051FBF8CBC00629E60 /* facebook-loginTests */,
 				3B986AEF1FBF8CBC00629E60 /* Products */,
+				3B986B111FBF8CEE00629E60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +104,16 @@
 				3B986B081FBF8CBC00629E60 /* Info.plist */,
 			);
 			path = "facebook-loginTests";
+			sourceTree = "<group>";
+		};
+		3B986B111FBF8CEE00629E60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B986B141FBF8CEE00629E60 /* Bolts.framework */,
+				3B986B121FBF8CEE00629E60 /* FBSDKCoreKit.framework */,
+				3B986B131FBF8CEE00629E60 /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +374,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/facebook-login/Frameworks",
+				);
 				INFOPLIST_FILE = "facebook-login/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jvrmed.facebook-login";
@@ -368,6 +392,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/facebook-login/Frameworks",
+				);
 				INFOPLIST_FILE = "facebook-login/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jvrmed.facebook-login";
