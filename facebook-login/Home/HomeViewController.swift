@@ -7,29 +7,40 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let myLoginButton = UIButton(type: .custom)
+        myLoginButton.backgroundColor = UIColor.darkGray
+        myLoginButton.frame = CGRect(x: 0, y: 0, width: 180, height: 40)
+        myLoginButton.center = view.center
+        myLoginButton.setTitle("My Login Button", for: .normal)
+        
+        // Handle clicks on the button
+        myLoginButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
+        
+        // Add the button to the view
+        view.addSubview(myLoginButton)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Once the button is clicked, show the login dialog
+    @objc func loginButtonClicked() {
+        let loginManager = FBSDKLoginManager()
+        loginManager.logIn(withReadPermissions: ["public_profile"], from: self) { (result, error) in
+            if let result = result {
+                if let _ = result.token {
+                    // Success
+                } else if result.isCancelled {
+                    // Cancelled by user
+                } else if let _ = error {
+                    // Error
+                }
+            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
