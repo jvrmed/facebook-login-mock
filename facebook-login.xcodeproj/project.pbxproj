@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B71CB131FC35B3300CADF26 /* FacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B71CB121FC35B3300CADF26 /* FacebookService.swift */; };
 		3B986AF21FBF8CBC00629E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B986AF11FBF8CBC00629E60 /* AppDelegate.swift */; };
 		3B986AF71FBF8CBC00629E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B986AF51FBF8CBC00629E60 /* Main.storyboard */; };
 		3B986AF91FBF8CBC00629E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B986AF81FBF8CBC00629E60 /* Assets.xcassets */; };
@@ -17,6 +18,12 @@
 		3B986B171FBF8CEF00629E60 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B141FBF8CEE00629E60 /* Bolts.framework */; };
 		3B986B1B1FBF8D4600629E60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B986B191FBF8D4600629E60 /* HomeViewController.swift */; };
 		3B986B1C1FBF8D4600629E60 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B986B1A1FBF8D4600629E60 /* HomeViewController.xib */; };
+		3BFDC38F1FC472D300959FB8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B141FBF8CEE00629E60 /* Bolts.framework */; };
+		3BFDC3901FC472D300959FB8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B121FBF8CEE00629E60 /* FBSDKCoreKit.framework */; };
+		3BFDC3911FC472D300959FB8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B986B131FBF8CEE00629E60 /* FBSDKLoginKit.framework */; };
+		3BFDC3921FC4741800959FB8 /* FacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B71CB121FC35B3300CADF26 /* FacebookService.swift */; };
+		3BFDC3931FC4741800959FB8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B986B191FBF8D4600629E60 /* HomeViewController.swift */; };
+		3BFDC3941FC4741800959FB8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B986B1A1FBF8D4600629E60 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B71CB121FC35B3300CADF26 /* FacebookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookService.swift; sourceTree = "<group>"; };
 		3B986AEE1FBF8CBC00629E60 /* facebook-login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "facebook-login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B986AF11FBF8CBC00629E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B986AF61FBF8CBC00629E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,12 +69,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BFDC38F1FC472D300959FB8 /* Bolts.framework in Frameworks */,
+				3BFDC3901FC472D300959FB8 /* FBSDKCoreKit.framework in Frameworks */,
+				3BFDC3911FC472D300959FB8 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B71CB141FC35B8A00CADF26 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3B71CB121FC35B3300CADF26 /* FacebookService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3B986AE51FBF8CBB00629E60 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +108,7 @@
 		3B986AF01FBF8CBC00629E60 /* facebook-login */ = {
 			isa = PBXGroup;
 			children = (
+				3B71CB141FC35B8A00CADF26 /* Services */,
 				3B986B181FBF8D3900629E60 /* Home */,
 				3B986AF11FBF8CBC00629E60 /* AppDelegate.swift */,
 				3B986AF51FBF8CBC00629E60 /* Main.storyboard */,
@@ -221,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BFDC3941FC4741800959FB8 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B986AF21FBF8CBC00629E60 /* AppDelegate.swift in Sources */,
+				3B71CB131FC35B3300CADF26 /* FacebookService.swift in Sources */,
 				3B986B1B1FBF8D4600629E60 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B986B071FBF8CBC00629E60 /* facebook_loginTests.swift in Sources */,
+				3BFDC3921FC4741800959FB8 /* FacebookService.swift in Sources */,
+				3BFDC3931FC4741800959FB8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +447,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/facebook-login/Frameworks",
+				);
 				INFOPLIST_FILE = "facebook-loginTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jvrmed.facebook-loginTests";
@@ -439,6 +467,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/facebook-login/Frameworks",
+				);
 				INFOPLIST_FILE = "facebook-loginTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jvrmed.facebook-loginTests";
